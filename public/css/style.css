@@ -1,43 +1,43 @@
 body {
     background-color: rgb(214, 207, 197);
-    font-family: Arial, sans-serif; /* Font para melhorar a legibilidade */
+    font-family: Arial, sans-serif; 
     margin: 0;
     padding: 0;
 }
 
 nav {
-    background-color: #333; /* Cor de fundo mais escura para o nav */
-    padding: 10px 20px; /* Adicionando espaçamento interno */
+    background-color: #333; 
+    padding: 10px 20px; 
 }
 
 nav ul {
-    list-style-type: none; /* Remove os pontos das listas */
+    list-style-type: none; 
     margin: 0;
     padding: 0;
-    display: flex; /* Flexbox para alinhar os itens lado a lado */
-    justify-content: center; /* Centraliza os itens */
+    display: flex;
+    justify-content: center; 
 }
 
 nav ul li {
-    margin: 0 15px; /* Espaçamento entre os itens do menu */
+    margin: 0 15px; 
 }
 
 nav ul li a {
-    color: white; /* Cor do texto dos links */
-    text-decoration: none; /* Remove o sublinhado do link */
-    font-size: 18px; /* Tamanho do texto */
-    transition: color 0.3s; /* Efeito de transição para a cor */
+    color: white; 
+    text-decoration: none; 
+    font-size: 18px; 
+    transition: color 0.3s; 
 }
 
 nav ul li a:hover {
-    color: #FFD700; /* Cor do link ao passar o mouse */
+    color: #FFD700; 
 }
 
 header {
-    background-color: #444; /* Cor de fundo para o header */
-    padding: 10px 0; /* Espaçamento do header */
+    background-color: #444; 
+    padding: 10px 0; 
     text-align: center;
-    color: white; /* Cor do texto do header */
+    color: white; 
 }
 
 main {
@@ -46,25 +46,24 @@ main {
 }
 
 h1 {
-    color: #333; /* Cor do título */
-    font-size: 36px; /* Tamanho do título */
+    color: #333; 
+    font-size: 36px; 
 }
 
 p {
-    color: #555; /* Cor do parágrafo */
-    font-size: 18px; /* Tamanho do texto */
+    color: #555; 
+    font-size: 18px; 
 }
 
 a{
-    color: #333; /* Cor do título */
-    
+    color: #333;
 }
 
 table {
     color: #333;
-    margin: 0 auto; /* Centraliza a tabela horizontalmente */
-    border-collapse: collapse; /* Para garantir que as bordas da tabela sejam colapsadas */
-    width: 80%; /* Opcional, você pode ajustar a largura conforme necessário */
+    margin: 0 auto; 
+    border-collapse: collapse; 
+    width: 80%; 
 }
 
 
