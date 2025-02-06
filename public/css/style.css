@@ -1,0 +1,87 @@
+body {
+    background-color: rgb(214, 207, 197);
+    font-family: Arial, sans-serif; /* Font para melhorar a legibilidade */
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333; /* Cor de fundo mais escura para o nav */
+    padding: 10px 20px; /* Adicionando espaçamento interno */
+}
+
+nav ul {
+    list-style-type: none; /* Remove os pontos das listas */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox para alinhar os itens lado a lado */
+    justify-content: center; /* Centraliza os itens */
+}
+
+nav ul li {
+    margin: 0 15px; /* Espaçamento entre os itens do menu */
+}
+
+nav ul li a {
+    color: white; /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-size: 18px; /* Tamanho do texto */
+    transition: color 0.3s; /* Efeito de transição para a cor */
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Cor do link ao passar o mouse */
+}
+
+header {
+    background-color: #444; /* Cor de fundo para o header */
+    padding: 10px 0; /* Espaçamento do header */
+    text-align: center;
+    color: white; /* Cor do texto do header */
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #333; /* Cor do título */
+    font-size: 36px; /* Tamanho do título */
+}
+
+p {
+    color: #555; /* Cor do parágrafo */
+    font-size: 18px; /* Tamanho do texto */
+}
+
+a{
+    color: #333; /* Cor do título */
+    
+}
+
+table {
+    color: #333;
+    margin: 0 auto; /* Centraliza a tabela horizontalmente */
+    border-collapse: collapse; /* Para garantir que as bordas da tabela sejam colapsadas */
+    width: 80%; /* Opcional, você pode ajustar a largura conforme necessário */
+}
+
+
+.flash-success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+}
+
+.flash-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+}
