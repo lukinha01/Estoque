@@ -1,0 +1,54 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/">Página inicial</a></li>
+                <li><a href="/fornecedores">Tornar-se Fornecedor</a></li>
+                <li><a href="/produtos">Produtos</a></li>
+                <li><a href="/transacoes">Transações</a></li>
+                <li><a href="/cadastrarEmpresa">Cadastre sua empresa</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Lista de Produtos e de quem é responsável</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Preco</th>
+                    <th>Quantidade</th>
+                    <th>Fornecedor</th>
+                    <th>Empresa</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each produtos}}
+                    <tr>
+                        <td>{{this.nome}}</td>
+                        <td>{{this.preco}}</td>
+                        <td>{{this.quantidade}}</td>
+                        <td>{{this.fornecedorID}}</td>
+                        <td>{{this.empresaId}}</td>
+                    </tr>
+                {{else}}
+                <p>Nenhum produto cadastrado</p>
+                {{/each}}
+            </tbody>
+        </table>
+        <br>
+        {{#if empresaLogada}}
+            <strong><a href="/adicionarProdutos">Adicionar Produto</a></strong>
+            <br>
+            <strong><a href="/editarProdutos">Editar Produto</a></strong>
+            <br>
+            <strong><a href="/deletarProduto">Deletar Produto</a></strong>
+        {{/if}}
+    </main>
+</body>

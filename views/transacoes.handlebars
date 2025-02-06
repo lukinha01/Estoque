@@ -1,0 +1,48 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transações</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/">Página inicial</a></li>
+                <li><a href="/fornecedores">Tornar-se Fornecedor</a></li>
+                <li><a href="/produtos">Produtos</a></li>
+                <li><a href="/transacoes">Transações</a></li>
+                <li><a href="/cadastrarEmpresa">Cadastre sua empresa</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Lista de Transações</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>tipo</th>
+                    <th>Quantidade</th>
+                    <th>data</th>
+                    <th>produtoID</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each transacoes}}
+                    <tr>
+                        <td>{{this.tipo}}</td>
+                        <td>{{this.quantidade}}</td>
+                        <td>{{this.data}}</td>
+                        <td>{{this.produtoID}}</td>
+                    </tr>
+                {{else}}
+                <p>Nenhum transação feita</p>
+                {{/each}}
+            </tbody>
+        </table>
+        <br>
+        {{#if empresaLogada}}
+            <a href="/fazertransacoes">Fazer Transações</a>
+        {{/if}}
+    </main>
+</body>

@@ -1,0 +1,51 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fornecedores</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/">Página inicial</a></li>
+                <li><a href="/fornecedores">Tornar-se Fornecedor</a></li>
+                <li><a href="/produtos">Produtos</a></li>
+                <li><a href="/transacoes">Transações</a></li>
+                <li><a href="/cadastrarEmpresa">Cadastre sua empresa</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Lista de Fornecedores</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Endereço</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each fornecedores}}
+                    <tr>
+                        <td>{{this.nome}}</td>
+                        <td>{{this.email}}</td>
+                        <td>{{this.telefone}}</td>
+                        <td>{{this.endereco}}</td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <br>
+        {{#if empresaLogada}}
+            <strong><a href="/adicionarFornecedores">Adicionar Fornecedor</a></strong>
+            <br>
+            <strong><a href="/editarFornecedor">Editar Fornecedor</a></strong>
+            <br>
+            <strong><a href="/deletarFornecedor">Deletar Fornecedor</a></strong>
+        {{/if}}
+    </main>
+</body>

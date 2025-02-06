@@ -1,0 +1,48 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Empresa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/">Página Inicial</a></li>
+                <li><a href="/produtos">Produtos</a></li>
+                <li><a href="/fornecedores">Fornecedores</a></li>
+                <li><a href="/transacoes">Transações</a></li>
+                <li><a href="/logout">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Editar informações da Empresa</h1>
+        {{#if success}}
+            <div class="flash-success">{{success}}</div>
+        {{/if}}
+        {{#if error}}
+            <div class="flash-error">{{error}}</div>
+        {{/if}}
+        <form action="/editarEmpresa" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" value="{{empresa.nome}}" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" value="{{empresa.email}}" required><br><br>
+            
+            <label for="telefone">Telefone:</label>
+            <input type="text" name="telefone" id="telefone" value="{{empresa.telefone}}" required><br><br>
+            
+            <label for="endereco">Endereço:</label>
+            <input type="text" name="endereco" id="endereco" value="{{empresa.endereco}}" required><br><br>
+            
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" id="senha" required><br><br>
+            
+            <button type="submit">Atualizar</button>
+        </form>
+        <a href="/perfil">Cancelar</a>
+    </main>
+</body>

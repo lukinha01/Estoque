@@ -1,0 +1,32 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil da Empresa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/">Página inicial</a></li>
+                <li><a href="/produtos">Produtos</a></li>
+                <li><a href="/fornecedores">Fornecedores</a></li>
+                <li><a href="/transacoes">Transações</a></li>
+                <li><a href="/logout">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Perfil da Empresa</h1>
+        <p><strong>Nome:</strong> {{empresa.nome}}</p>
+        <p><strong>Email:</strong> {{empresa.email}}</p>
+        <p><strong>Telefone:</strong> {{empresa.telefone}}</p>
+        <p><strong>Endereço:</strong> {{empresa.endereco}}</p>
+        <p><strong>Tipo:</strong> {{empresa.tipo}}</p>
+        <p><strong>Criado em:</strong> {{empresa.createdAt}}</p>
+        <strong><a href="/editarEmpresa">Editar Empresa</a></strong>
+        <br><br>
+        <strong><a href="/deletarEmpresa">Deletar Empresa</a></strong>
+    </main>
+</body>

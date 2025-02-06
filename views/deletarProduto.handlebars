@@ -1,0 +1,43 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deletar Produto</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/">Página Inicial</a></li>
+                <li><a href="/produtos">Produtos</a></li>
+                <li><a href="/fornecedores">Fornecedores</a></li>
+                <li><a href="/transacoes">Transações</a></li>
+                <li><a href="/logout">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Deletar Produto</h1>
+
+        <form action="/deletarProduto" method="POST">
+            <div>
+                <label for="nome">Produto a Ser Deletado:</label>
+                <select id="nome" name="nome" required>
+                    <option value="">Selecione o produto</option>
+                    <!-- As opções de produto serão preenchidas dinamicamente pelo backend -->
+                    {{#each produto}}
+                        <option value="{{this.nome}}">{{this.nome}}</option>
+                    {{/each}}
+                </select>
+            </div>
+
+            <div>
+                <label for="senha">Senha de Autorização:</label>
+                <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
+            </div>
+
+            <button type="submit">Deletar Produto</button>
+        </form>
+        <a href="/produtos">Cancelar</a>
+    </main>
+</body>

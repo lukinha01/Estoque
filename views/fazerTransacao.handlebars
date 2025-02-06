@@ -1,0 +1,48 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Transação</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/">Página inicial</a></li>
+                <li><a href="/fornecedores">Tornar-se Fornecedor</a></li>
+                <li><a href="/produtos">Produtos</a></li>
+                <li><a href="/transacoes">Transações</a></li>
+                <li><a href="/cadastrarEmpresa">Cadastre sua empresa</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Registrar Transação</h1>
+        <form action="/fazertransacoes" method="POST">
+            <div>
+                <label for="tipo">Tipo de Transação:</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="entrada">Entrada</option>
+                    <option value="saida">Saída</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" name="quantidade" required min="1" />
+            </div>
+
+            <div>
+                <label for="produtoID">Produto:</label>
+                <select id="produtoID" name="produtoID" required>
+                    {{#each produtos}}
+                        <option value="{{this.id}}">{{this.nome}}</option>
+                    {{/each}}
+                </select>
+            </div>
+
+            <button type="submit">Registrar Transação</button>
+        </form>
+        <a href="/transacoes">Cancelar</a>
+    </main>
+</body>

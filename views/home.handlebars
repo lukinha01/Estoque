@@ -1,0 +1,49 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Estoque</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/fornecedores">Tornar-se Fornecedor</a></li>
+                <li><a href="/produtos">Produtos</a></li>
+                <li><a href="/cadastrarEmpresa">Cadastre sua empresa</a></li>
+                <li><a href="/transacoes">Transações</a></li>
+                {{#if empresaLogada}}
+                    <li><a href="/perfilEmpresa">Perfil</a></li>
+                    <li><a href="/logout">Sair</a></li>
+                {{/if}}
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Bem-vindo ao Gerenciamento de Estoque</h1>
+        <p>Gerencie o estoque de sua empresa, seus fornecedores, produtos e transações de maneira eficiente.</p>
+        <h1>Empresas Cadastradas</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>                        <th>Telefone</th>
+                    <th>Endereço</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each empresas}}
+                    <tr>
+                        <td>{{this.nome}}</td>
+                        <td>{{this.email}}</td>
+                        <td>{{this.telefone}}</td>
+                        <td>{{this.endereco}}</td>
+                    </tr>
+                {{else}}
+                    <p>Nenhuma empresa cadastrada</p>
+                {{/each}}
+            </tbody>
+        </table>
+    </main>
+</body>

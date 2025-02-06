@@ -1,0 +1,36 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deletar Fornecedor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/">Página Inicial</a></li>
+            <li><a href="/produtos">Produtos</a></li>
+            <li><a href="/fornecedores">Fornecedores</a></li>
+            <li><a href="/transacoes">Transações</a></li>
+            <li><a href="/logout">Sair</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Deletar Fornecedor</h1>
+        <form action="/deletarFornecedor" method="POST">
+            <label for="email">Escolha o e-mail do fornecedor para exclusão:</label>
+            <select name="email" id="email" required>
+                <option value="">Selecione um fornecedor</option>
+                {{#each fornecedores}}
+                    <option value="{{this.email}}">{{this.email}}</option>
+                {{/each}}
+            </select><br><br>
+
+            <label for="senha">Senha da Empresa</label>
+            <input type="password" name="senha" required><br><br>
+
+            <button type="submit">Confirmar Exclusão</button>
+            <a href="/fornecedores">Cancelar</a>
+        </form>
+
+    </main>    
+</body>

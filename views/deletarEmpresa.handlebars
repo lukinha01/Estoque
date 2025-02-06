@@ -1,0 +1,29 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deletar Empresa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/">Página Inicial</a></li>
+                <li><a href="/produtos">Produtos</a></li>
+                <li><a href="/fornecedores">Fornecedores</a></li>
+                <li><a href="/transacoes">Transações</a></li>
+                <li><a href="/logout">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form action="/deletarEmpresa" method="POST">
+            <label for="senha">Digite sua senha para confirmar a exclusão:</label><br><br>
+            <input type="password" name="senha" id="senha" required><br><br>
+            
+            <button type="submit">Deletar Conta</button>
+        </form>
+        <a href="/perfil">Cancelar</a>
+    </main>
+</body>
